@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+<title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <div class="cadastro">
+        <h1>{{ Titulo }}</h1>
+    </div>
+    {% for Filme in ListaFilme %}
+        <div class="filmes-card">
+            <h2>Titulo: {{ Filme.titulo }}</h2>
+            <p>Lançamento: {{ Filme.lancamento }}</p>
+            <p>Diretor: {{ Filme.diretor }}</p>
+            <p>Origem: {{ Filme.origem }}</p>
+            <p>Classificação: {{ Filme.classificacao }} </p>
+            <br>
+            <a class="btn-excluir" href="/excluir/{{Filme.idfilme}}">Excluir</a>
+            <a class="btn-editar" href="/editar/{{Filme.idfilme}}">Editar</a>
+        </div>
+    {%endfor%}
+</body>
+</html>

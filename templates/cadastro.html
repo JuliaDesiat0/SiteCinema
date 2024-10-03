@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Titulo}}</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+ <div class="filmes-card">
+     <div class="page-header">
+          <h1>{{Titulo}}</h1>
+     </div>
+     <form action="/criar" method="post">
+         <fieldset>
+             <div class="form-group">
+                 <label for ='ID-Filmes'>ID: </label>
+                 <input type ='number' name='ID-Filmes' id='ID-Filmes' required>
+             </div>
+             <div class="form-group">
+                 <label for ='TituloFilme'>Titulo do Filme: </label>
+                 <input type='text' name='TituloFilme' id='TituloFilme' required>
+             </div>
+             <div class="form-group">
+                 <label for ='Lancamento'>Lançamento: </label>
+                 <input type ='number' name='Lancamento' id='Lancamento' required>
+             </div>
+             <div class="form-group">
+                 <label for ='DiretorFilme'>Diretor: </label>
+                 <input type='text' name='DiretorFilme' id='DiretorFilme' required>
+             </div>
+             <div class="form-group">
+                 <label for ='Origem'>País de Origem: </label>
+                 <input type='text' name='Origem' id='Origem' required>
+             </div>
+             <div class="form-group">
+                 <label for='Idade'>Classificação: </label>
+                 <select name='Idade' id='Idade' required>
+                     <option value='' selected>Selecione uma opção: </option>
+                     <option class="verde" value='Livre'>Livre</option>
+                     <option class="azul" value='10 Anos'>10 Anos</option>
+                     <option class="amarelo" value='12 Anos'>12 Anos</option>
+                     <option class="laranja" value='14 Anos'>14 Anos</option>
+                     <option class="vermelho" value='16 Anos'>16 Anos</option>
+                     <option value='18 Anos'>18 Anos</option>
+                 </select>
+             </div>
+             <button type='submit' class='btn-enviar'>Enviar</button>
+             <button type='reset' class='btn-resetar'>Resetar</button>
+
+
+         </fieldset>
+     </form>
+
+</div>
+</body>
+</html>
